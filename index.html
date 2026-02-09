@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5;
+        }
+        .loading {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">Loading PDF...</div>
+    
+    <script>
+        // Automatically open the PDF file
+        window.location.href = 'amx0009841.pdf';
+        
+        // Fallback: If automatic redirect doesn't work, show a manual link
+        setTimeout(() => {
+            document.body.innerHTML = `
+                <div style="text-align: center; font-family: Arial, sans-serif;">
+                    <h1>PDF Document</h1>
+                    <p>If the PDF didn't open automatically, click the link below:</p>
+                    <a href="amx0009841.pdf" target="_blank" style="color: #0066cc; text-decoration: underline;">
+                        Open amx0009841.pdf
+                    </a>
+                </div>
+            `;
+        }, 20000);
+    </script>
+</body>
+</html>
