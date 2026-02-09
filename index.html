@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Viewer</title>
+    <title>Certificate Download</title>
     <style>
         body {
             margin: 0;
@@ -12,34 +12,46 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            font-family: Arial, sans-serif;
             background-color: #f5f5f5;
         }
-        .loading {
-            font-family: Arial, sans-serif;
-            font-size: 18px;
-            color: #666;
+        .image-container {
+            position: relative;
+            text-align: center;
+        }
+        .main-image {
+            max-width: 100%;
+            max-height: 100vh;
+            display: block;
+        }
+        .download-button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #007bff;
+            color: white;
+            padding: 2vw 4vw;
+            font-size: clamp(14px, 2.5vw, 18px);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+            min-width: 120px;
+        }
+        .download-button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <div class="loading">Loading PDF...</div>
-    
-    <script>
-        // Automatically open the PDF file
-        window.location.href = 'amx0009841.pdf';
-        
-        // Fallback: If automatic redirect doesn't work, show a manual link
-        setTimeout(() => {
-            document.body.innerHTML = `
-                <div style="text-align: center; font-family: Arial, sans-serif;">
-                    <h1>PDF Document</h1>
-                    <p>If the PDF didn't open automatically, click the link below:</p>
-                    <a href="amx0009841.pdf" target="_blank" style="color: #0066cc; text-decoration: underline;">
-                        Open amx0009841.pdf
-                    </a>
-                </div>
-            `;
-        }, 20000);
-    </script>
+    <div class="image-container">
+        <img src="doby.jpg" alt="Certificate" class="main-image">
+        <a href="sertifikat_amx0009841.pdf" download class="download-button">
+            Yuklab olish
+        </a>
+    </div>
 </body>
 </html>
